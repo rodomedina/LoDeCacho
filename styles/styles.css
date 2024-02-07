@@ -1,0 +1,574 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.mi-imagen {
+    width: 20%;
+    height: auto;
+}
+
+.cont {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    position: relative;
+}
+
+#navbar .logo {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar .nav-links ul {
+    display: flex;
+}
+
+#navbar .nav-links ul li {
+    margin: 0 15px;
+}
+
+#navbar .nav-links ul .separador {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+#navbar .menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 25px;
+}
+
+#navbar .nav-links .bandera {
+    width: 25px;
+    margin-right: 5px;
+}
+
+#navbar .lognav {
+    height: 3.6rem;
+    position: absolute;
+    top: 68px;
+    left: 140px;
+}
+
+#navbar .logo {
+    position: absolute;
+    top: 37px;
+    left: 60px;
+}
+
+.nav-links {
+    width: 100%;
+    right: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    #contacto .mapa {
+        width: 100%;
+        height: 100px; /* Ajusta la altura según sea necesario */
+    }
+    #navbar {
+        padding: 0;
+    }
+
+    #navbar .logo {
+        position: absolute;
+        top: 37px;
+        left: 60px;
+    }
+
+    #navbar .menu {
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    #navbar .nav-links .bandera {
+        width: 35px;
+        height: 32px;
+        margin-right: 5px;
+    }
+
+    #navbar .nav-links .separador {
+        visibility: hidden;
+    }
+
+
+}
+
+/* Header */
+header {
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(fondo.jpg);
+}
+
+header .titulo h1 {
+    color: white;
+    font-size: 3rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-direction: column;
+    padding: 180px 12px;
+    height: 100vh;
+}
+
+/* Habitaciones */
+#habitaciones {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    background-color: #333;
+    padding: 15px 9%;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+#habitaciones .heading {
+    text-align: center;
+    padding-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    font-size: 40px;
+}
+
+#habitaciones .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+    transition: transform 0.5s ease; /* Agregamos una transición a la propiedad transform */
+}
+
+#habitaciones .modal-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#habitaciones .box-container .box {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 60px 20px;
+    transition: transform 0.6s ease;
+}
+
+.box-1 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(habitacion2.webp);
+}
+
+.box-2 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(habitacion2.webp);
+}
+
+.box-3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(habitacion4.webp);
+}
+
+#habitaciones .box-container .box h3 {
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+blockquote {
+    color: #fff;
+}
+
+#habitaciones .box-container .box:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    transform: translateY(-6px);
+}
+
+#habitaciones .box-container .modal-body .list-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Efecto de transición en el box-container */
+#habitaciones .box-container:hover {
+    transform: scale(1.02); /* Ajusta según tu preferencia */
+}
+
+/* Estilos para Comodidades */
+#comodidades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 80px 12px; /* Ajusté el padding para hacerlo más compacto */
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto; /* Cambié la altura a automático para adaptarse al contenido */
+}
+
+#comodidades .heading {
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#comodidades .box-container {
+    display: flex;
+    align-items: stretch; /* Hace que las cajas se estiren para ocupar toda la altura */
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+#comodidades .box {
+    flex: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    transition: transform 0.6s ease;
+    margin-bottom: 20px; /* Añadí margen inferior para separar las cajas */
+    height: 100%; /* Establece la altura al 100% para que todas tengan la misma altura */
+    display: flex;
+    flex-direction: column; /* Añadí dirección de columna para el contenido interno */
+}
+
+#comodidades .box i.material-icons {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#comodidades .box h3 {
+    color: #333;
+    font-size: 22px;
+    padding-bottom: 10px;
+    margin-bottom: 10px; /* Añadí margen inferior para separar el título del párrafo */
+}
+
+#comodidades .box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden; /* Evita que el contenido se desborde */
+    max-height: 100px; /* Establece una altura máxima para el contenido interno */
+}
+
+#comodidades .box:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+}
+
+/* Estilos específicos para los nuevos íconos */
+#comodidades .box i.material-icons.local_parking {
+    color: #4caf50; /* Color verde para el ícono de estacionamiento */
+}
+
+#comodidades .box i.material-icons.security {
+    color: #2196f3; /* Color azul para el ícono de cámaras de seguridad */
+}
+
+/* Media query para dispositivos con un ancho de pantalla menor */
+@media (max-width: 767px) {
+    #comodidades .box {
+        flex: 0 0 100%; /* Hace que las cajas ocupen el 100% del ancho en dispositivos móviles */
+        max-height: none; /* Elimina la altura máxima en dispositivos móviles */
+    }
+}
+
+/* Estilos para la Sección de Contacto */
+#contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 12px; /* Ajusta el padding según sea necesario */
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: #fff;
+}
+
+#contacto .redes-sociales {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+#contacto .heading {
+    font-size: 48px; /* Texto más grande */
+    margin-bottom: 30px; /* Menos espacio abajo */
+}
+
+#contacto .container {
+    max-width: 1200px;
+}
+
+#contacto .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+#contacto .redes-sociales a {
+    font-size: 48px; /* Íconos más grandes */
+    color: #fff;
+    transition: color 0.3s ease;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 20px; /* Más espacio alrededor de los íconos */
+}
+
+#contacto .redes-sociales a:hover {
+    color: #1ab152; /* Cambia el color al verde cuando se pasa el ratón */
+    background-color: #fff;
+}
+
+/* Añade estilos modernos y animados */
+.social-icon {
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: #1ab152; /* Cambia el fondo al verde cuando se pasa el ratón */
+}
+
+/* Estilos específicos para WhatsApp */
+.social-icon.whatsapp {
+    background-color: #25d366; /* Color de fondo específico para WhatsApp */
+}
+
+.social-icon.whatsapp:hover {
+    background-color: #fff; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Boton Whatsapp */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #999;
+    z-index: 100;
+}
+
+.float:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #1ab152;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+/* Navbar - Efecto Hover */
+#navbar .nav-links ul li a:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #1ab152;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar .nav-links ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #1ab152;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animación Shake */
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+/* Estilos para la Sección de Loading */
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0d0d0d; /* Color oscuro de fondo */
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.loading-spinner {
+    width: 120px; /* Aumentamos el tamaño para incluir el contorno */
+    height: 120px; /* Aumentamos el tamaño para incluir el contorno */
+    position: relative;
+    animation: rotate 2s linear infinite;
+    border: 5px solid transparent; /* Asegura un espacio para el contorno */
+    border-radius: 50%;
+}
+
+.loading-logo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #1ab152; /* Color del contorno, puedes ajustar el color */
+    border-radius: 50%;
+}
+
+.loading-logo {
+    width: 80%; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.loading-logo:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Estilos para la Sección de Footer */
+footer {
+    background-color: #f8f9fa; /* Fondo claro del footer */
+    color: #fff; /* Color del texto blanco */
+}
+
+.mi-imagen {
+    width: 100px; /* Tamaño de la imagen del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.nav-link {
+    font-weight: bold; /* Texto en negrita */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Color al pasar el ratón */
+}
+
+.text-dark {
+    opacity: 0.9; /* Opacidad del texto oscuro */
+}
